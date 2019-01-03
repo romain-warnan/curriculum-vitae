@@ -2,3 +2,9 @@
 *.log
 *.out
 *.pdf
+*.iml
+*.gz
+
+.idea/
+
+out/
