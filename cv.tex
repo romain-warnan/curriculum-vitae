@@ -8,12 +8,16 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}                        % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{xspace}
+\usepackage[frenchb]{babel}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 \usepackage[T1]{fontenc}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+%\NoAutoSpaceBeforeFDP
 
 % personal data
 \name{Romain}{Warnan}
@@ -34,14 +38,14 @@
 
 \section{Formation}\label{sec:formation}
 \cventry{2006--2007}
-{Qualification d’analyste développeur}
+{Qualification d'analyste développeur}
 {Institut de gestion publique et du développement économique}
 {Vincennes}
 {}
-{Conception de système d’information, et notions d’architecture informatique, de réseaux et de système d’exploitation}
+{Conception de système d'information, et notions d'architecture informatique, de réseaux et de système d'exploitation}
 \cventry{2004--2006}
-{Concours d’attaché statisticien de l’Insee}
-{École nationale de la statistique et de l’analyse de l’information}
+{Concours d'attaché statisticien de l'Insee}
+{École nationale de la statistique et de l'analyse de l'information}
 {Rennes}
 {}
 {Mathématiques, statistiques, économie, informatique: algorithmie et langage Java}
@@ -50,27 +54,55 @@
 {Lycée Janson de Sailly}
 {Paris}
 {}
-{Filière mathématiques, physique et sciences de l’ingénieur}
+{Filière mathématiques, physique et sciences de l'ingénieur}
 
 \section{Expérience professionnelle}\label{sec:expérience-professionnelle}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
+\cventry{depuis 2017}
+{Responsable de domaine}
+{Insee}
+{Montrouge}
+{}
+{Encadrement du groupe \og outils transverses \fg composé de 11 développeurs et assurant la maintenance d'applications transversales : gestions des annuaires, service de publipostage\ldots
 \begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
+  \item Encadrement de proximité ;
+  \item Support et expertise aux autres développeurs ;
+  \item Conception et animation de formation : Git et Spring MVC ;
+  \item Animation du développement.
 \end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+
+\cventry{2014--2017}
+{\textit{Lead-developer} : refonte du site \textit{insee.fr}}
+{Insee}
+{Malakoff}
+{}
+{Analyse et développements selon les méthodes Agiles dans le cadre d'un projet stratégique pour l'Insee : la refonte complète de son site de diffusion et de son \textit{back-office} :
+\begin{itemize}%
+  \item estimation des charges ;
+  \item analyse, conception et développements des fonctionnalités les plus complexes ;
+  \item prise en compte des contraintes : accessibilité, \textit{responsive design}, référencement,  sécurité et performances ;
+  \item contrôle de la qualité des développements ;
+  \item mise en production.
+\end{itemize}%
+Technologies utilisées :
+\begin{itemize}%
+  \item \textit{back-end} : Java avec Spring MVC, serveur Tomcat ;
+  \item \textit{front-end} : JSP / jQuery, et React / Redux, Sass / Compass ;
+  \item données : Postgres et SolR
+\end{itemize}}
+
+\cventry{2012--2014}
+{\textit{Lead-developer} : refonte du site \textit{sirene.fr}}
+{Insee}
+{Malakoff}
+{}
+{Développements et encadrement des développeurs dans le cadre de la refonte du site de diffusion des données d'entreprises.
+\newline Technologies utilisées :
+\begin{itemize}%
+  \item \textit{back-end} : Java avec Struts2, serveur Tomcat ;
+  \item \textit{front-end} : JSP / jQuery / Bootstrap ;
+  \item données : Postgres
+  \item paiement en ligne : Paybox
+\end{itemize}}%
 
 \section{Langues étrangères}\label{sec:langues-etrangeres}
 \cvitemwithcomment{Anglais}{Bon niveau}{Très bien lu, bien compris, assez bien parlé}
