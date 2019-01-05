@@ -12,6 +12,8 @@
 \usepackage[utf8]{inputenc}                        % if you are not using xelatex ou lualatex, replace by the encoding you are using
 \usepackage{xspace}
 \usepackage[frenchb]{babel}
+\usepackage{intcalc}
+\usepackage{multido}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -36,6 +38,14 @@
   J'ai été maintenicien, puis \emph{lead-developer} et je suis aujourd'hui responsable d'un groupe de développeurs.
 }
 
+\newcommand{\stars}[1]{
+    \multido{}{\intcalcDiv{#1}{2}}{\faStar}
+    \if1\intcalcMod{#1}{2}
+        \faStarHalfO
+    \fi
+    \multido{}{\intcalcDiv{\intcalcSub{10}{#1}}{2}}{\faStarO}
+}
+
 \begin{document}
 
 \makecvtitle
@@ -48,6 +58,7 @@
 {Vincennes}
 {}
 {Conception de système d'information, et notions d'architecture informatique, de réseaux et de système d'exploitation}
+
 
 \cventry{2004--2006}
 {Concours d'attaché statisticien de l'Insee}
@@ -136,8 +147,8 @@ Technologies utilisées :
 \cvitem{Productivité}{Git, Get Things Done, Manager de proximité}
 
 \section{Compétences informatiques}\label{sec:competences-informatiques}
-\cvdoubleitem{Java}{\faStar\faStar\faStar\faStar\faStarHalfO}{\mbox{HTML/CSS}}{\faStar\faStar\faStar\faStarHalfO\faStarO}
-\cvdoubleitem{Javascript}{\faStar\faStar\faStar\faStar\faStarO}{\mbox{React/Redux}}{\faStar\faStar\faStar\faStarO\faStarO}
-\cvdoubleitem{Shell}{\faStar\faStar\faStar\faStarO\faStarO}{Git}{\faStar\faStar\faStar\faStar\faStarO}
+\cvdoubleitem{Java}{\stars{9}}{\mbox{HTML / CSS}}{\stars{7}}
+\cvdoubleitem{Javascript}{\stars{8}}{\mbox{React / Redux}}{\stars{6}}
+\cvdoubleitem{Shell}{\stars{6}}{Git}{\stars{8}}
 
 \end{document}
