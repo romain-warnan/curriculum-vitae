@@ -32,17 +32,20 @@ done
 cv_style=${cv_style:-'classic'}
 cv_color=${cv_color:-'burgundy'}
 
-printf "Generate PDF style '%s', color '%s'\n" "$cv_style" "$cv_color"
+printf "Generating PDF: style '%s', color '%s'\n" "$cv_style" "$cv_color"
 
 cv_filename=cv-${cv_style}-${cv_color}.tex
 
 sed "s/moderncvstyle{classic}/moderncvstyle{${cv_style}}/g" cv.tex > ${cv_filename}
 sed -i "s/moderncvcolor{burgundy}/moderncvcolor{${cv_color}}/g" ${cv_filename}
 
-pdflatex -quiet -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf ${cv_filename}
+pdflatex -quiet -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf ${cv_filename} > /dev/null
 
 rm ${cv_filename}
 rm *.aux
 rm *.log
 rm *.out
 rm *.gz
+
+printf "Output written in: cv-%s-%s.pdf\n" "$cv_style" "$cv_color"
+
