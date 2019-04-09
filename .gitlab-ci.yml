@@ -12,7 +12,7 @@ pdf:
     - ./compile.sh -s casual -c green
     artifacts:
             paths:
-            - *.pdf
+            - "*.pdf"
             expire_in: 5 minutes
 
 pages:
