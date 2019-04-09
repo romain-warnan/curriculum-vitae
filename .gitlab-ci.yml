@@ -2,13 +2,27 @@ variables:
         GIT_SSL_NO_VERIFY: "1"
 
 stages:
-        - compile
-        - deploy
+- compile
+- deploy
 
 pdf:
-        stage: compile
-        image: schickling/latex
-        script:
-                pwd
-                ls -al
-                cat compile.sh
+    stage: compile
+    image: schickling/latex
+    script:
+    - ./compile.sh -s casual -c green
+    artifacts:
+            paths:
+            - *.pdf
+            expire_in: 5 minutes
+
+pages:
+    stage: deploy
+    tags:
+    - shell
+    script:
+    - mkdir .public
+    - cp *.pdf .public
+    - mv .public public
+    artifacts:
+        paths:
+        - public
