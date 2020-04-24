@@ -39,7 +39,7 @@ cv_filename=cv-${cv_style}-${cv_color}.tex
 sed "s/moderncvstyle{classic}/moderncvstyle{${cv_style}}/g" cv.tex > ${cv_filename}
 sed -i "s/moderncvcolor{burgundy}/moderncvcolor{${cv_color}}/g" ${cv_filename}
 
-pdflatex -quiet -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf ${cv_filename} > /dev/null
+pdflatex -file-line-error -interaction=nonstopmode -synctex=1 -output-format=pdf ${cv_filename} > /dev/null
 
 rm ${cv_filename}
 rm *.aux
